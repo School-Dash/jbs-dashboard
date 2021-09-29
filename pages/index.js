@@ -5,15 +5,14 @@ export default function Home({ dayType }) {
 	return (
 		<Layout>
 			<h1 className="text-4xl font-medium font-serif mt-5">
-				day type: {dayType}
+				Day Type: {dayType}
 			</h1>
 		</Layout>
 	);
 }
 
 export async function getStaticProps({ params }) {
-	let dayType;
-	await fetch(
+	const dayType = await fetch(
 		'https://calendar.google.com/calendar/ical/daily.schedule@jburroughs.org/public/basic.ics'
 	)
 		.then(response => {
@@ -22,7 +21,7 @@ export async function getStaticProps({ params }) {
 		.then(data => {
 			const cal = new Calendar(data);
 
-			dayType = cal.getDayType(new Date(2021, 8, 28));
+			return cal.getDayType(new Date(2021, 8, 28));
 		});
 	return {
 		props: {

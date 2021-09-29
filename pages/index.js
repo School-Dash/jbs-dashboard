@@ -21,7 +21,7 @@ export async function getStaticProps({ params }) {
 		.then(data => {
 			const cal = new Calendar(data);
 
-			return cal.getDayType(new Date(2021, 8, 28));
+			return cal.getDayType(new Date());
 		});
 	return {
 		props: {

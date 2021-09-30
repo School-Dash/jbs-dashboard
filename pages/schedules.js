@@ -1,15 +1,15 @@
 import Layout from '../components/Layout.js';
 import { SCHEDULES, SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
+import padZeros from '../lib/padZeros.js';
 
 export default function Schedules() {
 	function periodLabel(index, isCom) {
-		if (index < 4 || !isCom) {
+		if (index < 4) {
 			return index == 0 ? 'Assembly' : `Period ${index}`;
-		} else if (index == 4) {
+		} else if (index == 4 && isCom) {
 			return 'Common';
-		} else {
-			return `Period ${index - 1}`;
 		}
+		return `Period ${index - 1}`;
 	}
 
 	return (
@@ -22,7 +22,9 @@ export default function Schedules() {
 						<table>
 							<tbody>
 								{item[1].map((period, j) => {
-									const isCom = item[1].length > 11;
+									const isCom = item[1][4][0] != 0; //checks if common period is blank [0,0]
+
+									if (period[0] == 0) return;
 
 									return (
 										<tr key={`${j} ${i}`}>
@@ -32,10 +34,11 @@ export default function Schedules() {
 													period[k] / 100
 												);
 												const m = period[k] % 100;
+
 												return (
 													<td key={`${k} ${j} ${i}`}>
 														{h > 12 ? h - 12 : h}:
-														{m < 10 ? `0${m}` : m}
+														{padZeros(m)}
 													</td>
 												);
 											})}

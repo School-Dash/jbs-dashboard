@@ -1,19 +1,27 @@
 import Layout from '../components/Layout.js';
 import Calendar from '../lib/calendar.js';
 import { SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
+import padZeros from '../lib/padZeros.js';
 
 export default function Home({ calData }) {
 	let cal = new Calendar(calData);
 
-	const dayType = cal.getDayType(new Date());
+	let now = new Date();
+
+	const dayType = cal.getDayType(now);
+
+	let period = cal.getPeriod(cal.formatTime(now), dayType);
 
 	return (
 		<Layout>
 			<h1 className="text-4xl font-medium font-serif mt-5">
 				Day Type: {SCHEDULE_DAY_TYPES[dayType]}
 			</h1>
+			<h2>Period: {period}</h2>
 			<h2>
-				Period: {cal.getPeriod(cal.formatTime(new Date()), dayType)}
+				Period ends in{' '}
+				{cal.getEndOfPeriod(dayType, period) - cal.formatTime(now)}:
+				{padZeros(`${60 - now.getSeconds()}`)}
 			</h2>
 		</Layout>
 	);

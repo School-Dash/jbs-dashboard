@@ -2,15 +2,24 @@ import Layout from '../components/Layout.js';
 import Calendar from '../lib/calendar.js';
 import { SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
 import padZeros from '../lib/padZeros.js';
+import { useState, useEffect } from 'react';
 
 export default function Home({ calData }) {
 	let cal = new Calendar(calData);
 
-	let now = new Date();
+	const [currentTime, setTime] = useState(new Date());
 
-	const dayType = cal.getDayType(now);
+	const dayType = cal.getDayType(currentTime);
 
-	let period = cal.getPeriod(cal.formatTime(now), dayType);
+	let period = cal.getPeriod(cal.formatTime(currentTime), dayType);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setTime(new Date());
+		}, 1000);
+
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
 		<Layout>
@@ -20,8 +29,9 @@ export default function Home({ calData }) {
 			<h2>Period: {period}</h2>
 			<h2>
 				Period ends in{' '}
-				{cal.getEndOfPeriod(dayType, period) - cal.formatTime(now)}:
-				{padZeros(`${60 - now.getSeconds()}`)}
+				{cal.getEndOfPeriod(dayType, period) -
+					cal.formatTime(currentTime)}
+				:{padZeros(`${60 - currentTime.getSeconds()}`)}
 			</h2>
 		</Layout>
 	);

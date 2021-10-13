@@ -26,13 +26,33 @@ export default function Home({ calData }) {
 			<h1 className="text-4xl font-medium font-serif mt-5">
 				Day Type: {SCHEDULE_DAY_TYPES[dayType]}
 			</h1>
-			<h2>Period: {period}</h2>
-			<h2>
-				Period ends in{' '}
-				{cal.getEndOfPeriod(dayType, period) -
-					cal.formatTime(currentTime)}
-				:{padZeros(`${60 - currentTime.getSeconds()}`)}
-			</h2>
+			{dayType != 'NO_SCHOOL' ? (
+				period <= 12 ? (
+					<>
+						<h2>{cal.formatPeriod(period)}</h2>
+						<h2>
+							Period ends in{' '}
+							{cal.getEndOfPeriod(dayType, period) -
+								Math.ceil(
+									parseInt(cal.formatTime(currentTime)) +
+										currentTime.getSeconds() / 100.0
+								)}
+							:
+							{padZeros(
+								`${
+									currentTime.getSeconds() == 0
+										? 0
+										: 60 - currentTime.getSeconds()
+								}`
+							)}
+						</h2>
+					</>
+				) : (
+					<h2>School Over</h2>
+				)
+			) : (
+				<>No School Stuff</>
+			)}
 		</Layout>
 	);
 }

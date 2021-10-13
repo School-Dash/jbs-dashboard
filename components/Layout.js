@@ -8,6 +8,7 @@ export default function Layout({ children }) {
 				<title>JBS Dashboard</title>
 				<meta name="author" content="Eli Front" />
 				<meta name="description" content="JBS Dashboard" />
+				<link rel="apple-touch-icon" href="/favicon.ico" />
 			</Head>
 			{children}
 		</>

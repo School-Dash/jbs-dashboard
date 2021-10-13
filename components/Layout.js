@@ -9,6 +9,7 @@ export default function Layout({ children }) {
 				<meta name="author" content="Eli Front" />
 				<meta name="description" content="JBS Dashboard" />
 				<link rel="apple-touch-icon" href="/favicon.ico" />
+				<meta name="apple-mobile-web-app-title" content="JBS Dash" />
 			</Head>
 			{children}
 		</>

@@ -23,36 +23,42 @@ export default function Home({ calData }) {
 
 	return (
 		<Layout>
-			<h1 className="text-4xl font-medium font-serif mt-5">
-				Day Type: {SCHEDULE_DAY_TYPES[dayType]}
-			</h1>
-			{dayType != 'NO_SCHOOL' ? (
-				period <= 12 ? (
-					<>
-						<h2>{cal.formatPeriod(period)}</h2>
-						<h2>
-							Period ends in{' '}
-							{cal.getEndOfPeriod(dayType, period) -
-								Math.ceil(
-									parseInt(cal.formatTime(currentTime)) +
-										currentTime.getSeconds() / 100.0
+			<main className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen fixed">
+				<h1 className="text-4xl font-medium font-serif pt-5 text-center">
+					Day Type: {SCHEDULE_DAY_TYPES[dayType]}
+				</h1>
+				{dayType != 'NO_SCHOOL' ? (
+					period <= 12 ? (
+						<>
+							<h2 className="text-center text-3xl p-4">
+								{cal.formatPeriod(period)}
+							</h2>
+							<h2 className="text-center text-3xl p-4">
+								Period ends in{' '}
+								{cal.getEndOfPeriod(dayType, period) -
+									Math.ceil(
+										parseInt(cal.formatTime(currentTime)) +
+											currentTime.getSeconds() / 100.0
+									)}
+								:
+								{padZeros(
+									`${
+										currentTime.getSeconds() == 0
+											? 0
+											: 60 - currentTime.getSeconds()
+									}`
 								)}
-							:
-							{padZeros(
-								`${
-									currentTime.getSeconds() == 0
-										? 0
-										: 60 - currentTime.getSeconds()
-								}`
-							)}
+							</h2>
+						</>
+					) : (
+						<h2 className="text-center text-3xl p-4">
+							School Over
 						</h2>
-					</>
+					)
 				) : (
-					<h2>School Over</h2>
-				)
-			) : (
-				<>No School Stuff</>
-			)}
+					<>No School Stuff</>
+				)}
+			</main>
 		</Layout>
 	);
 }

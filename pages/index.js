@@ -35,11 +35,10 @@ export default function Home({ calData }) {
 							</h2>
 							<h2 className="text-center text-3xl p-4">
 								Period ends in{' '}
-								{cal.getEndOfPeriod(dayType, period) -
-									Math.ceil(
-										parseInt(cal.formatTime(currentTime)) +
-											currentTime.getSeconds() / 100.0
-									)}
+								{cal.getTimeDifference(
+									cal.formatTime(currentTime),
+									cal.getEndOfPeriod(dayType, period)
+								) - Math.round(currentTime.getSeconds())}
 								:
 								{padZeros(
 									`${

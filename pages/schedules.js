@@ -14,42 +14,62 @@ export default function Schedules() {
 
 	return (
 		<Layout>
-			<h1>schedules</h1>
-			{Object.entries(SCHEDULES).map((item, i) => {
-				return (
-					<div key={i}>
-						<h3>{SCHEDULE_DAY_TYPES[item[0]]}</h3>
-						<table>
-							<tbody>
-								{item[1].map((period, j) => {
-									const isCom = item[1][4][0] != 0; //checks if common period is blank [0,0]
+			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-full p-10">
+				<header>
+					<h1 className="font-extrabold text-4xl py-5 text-center">
+						Schedules
+					</h1>
+				</header>
+				<main className="flex flex-wrap justify-between	px-20 m-h-screen">
+					{Object.entries(SCHEDULES).map((item, i) => {
+						return (
+							<div
+								key={i}
+								className="bg-opacity-50 bg-white w-min rounded-lg px-5 my-7"
+							>
+								<h3 className="text-2xl py-3">
+									{SCHEDULE_DAY_TYPES[item[0]]}
+								</h3>
+								<table>
+									<tbody>
+										{item[1].map((period, j) => {
+											const isCom = item[1][4][0] != 0; //checks if common period is blank [0,0]
 
-									if (period[0] == 0) return;
+											if (period[0] == 0) return;
 
-									return (
-										<tr key={`${j} ${i}`}>
-											<th>{periodLabel(j, isCom)}</th>
-											{period.map((_, k) => {
-												const h = Math.floor(
-													period[k] / 100
-												);
-												const m = period[k] % 100;
+											return (
+												<tr key={`${j} ${i}`}>
+													<th className="text-left pr-3">
+														{periodLabel(j, isCom)}
+													</th>
+													{period.map((_, k) => {
+														const h = Math.floor(
+															period[k] / 100
+														);
+														const m =
+															period[k] % 100;
 
-												return (
-													<td key={`${k} ${j} ${i}`}>
-														{h > 12 ? h - 12 : h}:
-														{padZeros(m)}
-													</td>
-												);
-											})}
-										</tr>
-									);
-								})}
-							</tbody>
-						</table>
-					</div>
-				);
-			})}
+														return (
+															<td
+																key={`${k} ${j} ${i}`}
+															>
+																{h > 12
+																	? h - 12
+																	: h}
+																:{padZeros(m)}
+															</td>
+														);
+													})}
+												</tr>
+											);
+										})}
+									</tbody>
+								</table>
+							</div>
+						);
+					})}
+				</main>
+			</body>
 		</Layout>
 	);
 }

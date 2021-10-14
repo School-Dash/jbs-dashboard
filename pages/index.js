@@ -23,9 +23,9 @@ export default function Home({ calData }) {
 
 	return (
 		<Layout>
-			<main className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen fixed">
-				<h1 className="text-4xl font-medium font-serif pt-5 text-center">
-					Day Type: {SCHEDULE_DAY_TYPES[dayType]}
+			<main className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen fixed p-10">
+				<h1 className="text-4xl font-semibold font-sans p-5 text-center bg-opacity-50 bg-white w-min m-auto rounded-lg">
+					{SCHEDULE_DAY_TYPES[dayType]}
 				</h1>
 				{dayType != 'NO_SCHOOL' ? (
 					period <= 12 ? (

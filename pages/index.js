@@ -23,9 +23,15 @@ export default function Home({ calData }) {
 
 	return (
 		<Layout>
-			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen fixed p-10">
-				<main>
-					<h1 className="text-4xl font-semibold font-sans p-5 text-center bg-opacity-50 bg-white w-min m-auto rounded-lg">
+			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen fixed ">
+				<main className="p-5">
+					<a
+						className="font-semibold text-3xl p-3 bg-red-500 rounded-md"
+						href="/schedules"
+					>
+						Schedules
+					</a>
+					<h1 className="text-2xl font-semibold font-sans p-5 text-center bg-opacity-50 bg-white w-min m-auto rounded-lg">
 						{SCHEDULE_DAY_TYPES[dayType]}
 					</h1>
 					{dayType != 'NO_SCHOOL' ? (

@@ -46,7 +46,7 @@ export default function Home({ calData }) {
 									{cal.getTimeDifference(
 										cal.formatTime(currentTime),
 										cal.getEndOfPeriod(dayType, period)
-									) - Math.round(currentTime.getSeconds())}
+									) - Math.min(currentTime.getSeconds(), 1)}
 									:
 									{padZeros(
 										`${

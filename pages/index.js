@@ -36,10 +36,10 @@ export default function Home({ calData }) {
 						{SCHEDULE_DAY_TYPES[dayType]}
 					</h1>
 					{dayType != 'NO_SCHOOL' ? (
-						period <= 12 ? (
+						period <= 11 ? (
 							<>
 								<h2 className="text-center text-3xl p-4">
-									{cal.formatPeriod(period)}
+									{cal.formatPeriod(period, dayType)}
 								</h2>
 								<h2 className="text-center text-3xl p-4">
 									Period ends in{' '}

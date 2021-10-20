@@ -17,14 +17,14 @@ export default function Layout({ children }) {
 			</Head>
 			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-full bg-no-repeat min-h-screen">
 				<header>
-					<nav className="w-full bg-opacity-50 bg-white p-5 fixed">
+					<nav className="w-full bg-opacity-50 bg-white p-5 fixed backdrop-filter backdrop-blur-md">
 						<Link href="/">
-							<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-30 rounded-md transition-color duration-200 hover:bg-opacity-20">
+							<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-40 rounded-md transition-color duration-200 hover:bg-opacity-20">
 								Home
 							</a>
 						</Link>
 						<Link href="/schedules">
-							<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-30 rounded-md transition-color duration-200 hover:bg-opacity-20">
+							<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-40 rounded-md transition-color duration-200 hover:bg-opacity-20">
 								Schedules
 							</a>
 						</Link>

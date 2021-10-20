@@ -6,9 +6,12 @@ export default function Layout({ children }) {
 		<>
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
-				<title>JBS Dashboard</title>
+				<title>JBS Dashboard - Live Bell Schedule</title>
 				<meta name="author" content="Eli Front" />
-				<meta name="description" content="JBS Dashboard" />
+				<meta
+					name="description"
+					content="JBS Dashboard. Has a live bell schedule and a list of all schedules. Probably not liable for you missing class."
+				/>
 				<link rel="apple-touch-icon" href="/favicon.ico" />
 				<meta name="apple-mobile-web-app-title" content="JBS Dash" />
 			</Head>

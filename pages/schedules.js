@@ -14,18 +14,18 @@ export default function Schedules() {
 
 	return (
 		<Layout>
-			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-full p-10">
+			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full p-10">
 				<header>
 					<h1 className="font-extrabold text-4xl py-5 text-center">
 						Schedules
 					</h1>
 				</header>
-				<main className="flex flex-wrap justify-between	px-20 m-h-screen">
+				<main className="flex flex-wrap justify-around px-20">
 					{Object.entries(SCHEDULES).map((item, i) => {
 						return (
 							<div
 								key={i}
-								className="bg-opacity-50 bg-white w-min rounded-lg px-5 my-7"
+								className="bg-opacity-50 bg-white w-min rounded-lg px-5 my-7 mx-10"
 							>
 								<h3 className="text-2xl py-3">
 									{SCHEDULE_DAY_TYPES[item[0]]}

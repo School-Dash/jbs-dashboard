@@ -24,7 +24,7 @@ export default function Home({ calData }) {
 
 	return (
 		<Layout>
-			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen fixed ">
+			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen ">
 				<main className="p-5">
 					<Link href="/schedules">
 						<a className="font-semibold text-3xl p-3 bg-red-500 rounded-md">

@@ -12,21 +12,23 @@ export default function Layout({ children }) {
 				<link rel="apple-touch-icon" href="/favicon.ico" />
 				<meta name="apple-mobile-web-app-title" content="JBS Dash" />
 			</Head>
-			<header>
-				<nav className="w-full bg-opacity-50 bg-white p-5 fixed">
-					<Link href="/">
-						<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-30 rounded-md transition-color duration-200 hover:bg-opacity-20">
-							Home
-						</a>
-					</Link>
-					<Link href="/schedules">
-						<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-30 rounded-md transition-color duration-200 hover:bg-opacity-20">
-							Schedules
-						</a>
-					</Link>
-				</nav>
-			</header>
-			{children}
+			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-full bg-no-repeat min-h-screen">
+				<header>
+					<nav className="w-full bg-opacity-50 bg-white p-5 fixed">
+						<Link href="/">
+							<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-30 rounded-md transition-color duration-200 hover:bg-opacity-20">
+								Home
+							</a>
+						</Link>
+						<Link href="/schedules">
+							<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-30 rounded-md transition-color duration-200 hover:bg-opacity-20">
+								Schedules
+							</a>
+						</Link>
+					</nav>
+				</header>
+				{children}
+			</body>
 		</>
 	);
 }

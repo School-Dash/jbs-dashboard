@@ -14,13 +14,11 @@ export default function Schedules() {
 
 	return (
 		<Layout>
-			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full p-10">
-				<header>
-					<h1 className="font-extrabold text-4xl py-5 text-center">
-						Schedules
-					</h1>
-				</header>
-				<main className="flex flex-wrap justify-around px-20">
+			<main>
+				<h1 className="font-extrabold text-4xl py-5 text-center pt-36">
+					Schedules
+				</h1>
+				<section className="flex flex-wrap justify-around px-20">
 					{Object.entries(SCHEDULES).map((item, i) => {
 						return (
 							<div
@@ -68,8 +66,8 @@ export default function Schedules() {
 							</div>
 						);
 					})}
-				</main>
-			</body>
+				</section>
+			</main>
 		</Layout>
 	);
 }

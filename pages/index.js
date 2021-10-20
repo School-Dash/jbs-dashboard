@@ -1,6 +1,5 @@
 import Layout from '../components/Layout.js';
 import Calendar from '../lib/calendar.js';
-import Link from 'next/link';
 import { SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
 import padZeros from '../lib/padZeros.js';
 import { useState, useEffect } from 'react';
@@ -24,14 +23,8 @@ export default function Home({ calData }) {
 
 	return (
 		<Layout>
-			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen ">
-				<main className="p-5">
-					<Link href="/schedules">
-						<a className="font-semibold text-3xl p-3 bg-red-500 rounded-md">
-							Schedules
-						</a>
-					</Link>
-
+			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-screen">
+				<main className="pt-36">
 					<h1 className="text-2xl font-semibold font-sans p-5 text-center bg-opacity-50 bg-white w-min m-auto rounded-lg">
 						{SCHEDULE_DAY_TYPES[dayType]}
 					</h1>

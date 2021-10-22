@@ -7,20 +7,20 @@ import { useState, useEffect } from 'react';
 export default function Home({ calData }) {
 	let cal = new Calendar(calData);
 
-	const [currentTime, setTime] = useState(new Date());
-	// const currentTime = new Date('2021-10-21T16:25:00');
+	// const [currentTime, setTime] = useState(new Date());
+	const currentTime = new Date('2021-10-22T11:23:00');
 
 	const dayType = cal.getDayType(currentTime);
 
 	let period = cal.getPeriod(cal.formatTime(currentTime), dayType);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setTime(new Date());
-		}, 1000);
-
-		return () => clearInterval(interval);
-	}, []);
+	//
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		setTime(new Date());
+	// 	}, 1000);
+	//
+	// 	return () => clearInterval(interval);
+	// }, []);
 
 	return (
 		<Layout>

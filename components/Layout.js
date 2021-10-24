@@ -28,6 +28,11 @@ export default function Layout({ children }) {
 								Schedules
 							</a>
 						</Link>
+						<Link href="/share">
+							<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-40 rounded-md transition-color duration-200 hover:bg-opacity-20">
+								Share
+							</a>
+						</Link>
 					</nav>
 				</header>
 				{children}

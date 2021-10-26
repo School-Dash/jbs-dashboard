@@ -8,7 +8,7 @@ export default function Home({ calData }) {
 	let cal = new Calendar(calData);
 
 	const [currentTime, setTime] = useState(new Date());
-	// const currentTime = new Date('2021-10-22T16:25:00');
+	// const currentTime = new Date('2021-10-22T11:21:00');
 
 	const dayType = cal.getDayType(currentTime);
 

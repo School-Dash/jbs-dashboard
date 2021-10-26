@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://elifront.com
+Host: https://jbsdash.netlify.app
 
 # Sitemaps
-Sitemap: https://elifront.com/sitemap.xml
+Sitemap: https://jbsdash.netlify.app/sitemap.xml

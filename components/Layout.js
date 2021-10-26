@@ -15,7 +15,7 @@ export default function Layout({ children }) {
 				<link rel="apple-touch-icon" href="/favicon.ico" />
 				<meta name="apple-mobile-web-app-title" content="JBS Dash" />
 			</Head>
-			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-full bg-no-repeat min-h-screen">
+			<body className="bg-gradient-to-r from-green-400 to-blue-500 w-full h-full bg-no-repeat min-h-screen max-w-screen">
 				<header>
 					<nav className="w-full bg-opacity-50 bg-white p-5 fixed backdrop-filter backdrop-blur-md">
 						<Link href="/">

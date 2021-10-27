@@ -29,7 +29,7 @@ export default function Home({ calData }) {
 					{SCHEDULE_DAY_TYPES[dayType]}
 				</h1>
 				{dayType != 'NO_SCHOOL' ? (
-					period == null ? (
+					period != null && !cal.isEndOfDay(period, dayType) ? (
 						<>
 							<h2 className="text-center text-3xl p-4">
 								{cal.formatPeriod(period, dayType)}

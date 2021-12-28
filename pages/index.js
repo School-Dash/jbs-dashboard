@@ -52,7 +52,7 @@ export default function Home({ calData }) {
 						</>
 					) : (
 						<h2 className="text-center text-3xl p-4">
-							School's Over
+							School&apos;s Over
 						</h2>
 					)
 				) : (

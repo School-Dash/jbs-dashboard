@@ -35,47 +35,47 @@ export default function QuietPlaces() {
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Clement-Bayard,
+							Sarah,
 							<br />
-							Allegra
+							Hasselman
 							<br />
-							104
+							???
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Clement-Bayard,
+							Sarah,
 							<br />
-							Allegra
+							Hasselman
 							<br />
-							104
+							???
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Clement-Bayard,
+							Sarah,
 							<br />
-							Allegra
+							Hasselman
 							<br />
-							104
+							???
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Clement-Bayard,
+							Sarah,
 							<br />
-							Allegra
+							Hasselman
 							<br />
-							104
+							???
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Clement-Bayard,
+							Sarah,
 							<br />
-							Allegra
+							Hasselman
 							<br />
-							104
+							???
 						</td>
 					</tr>
 					<tr>
@@ -295,37 +295,47 @@ export default function QuietPlaces() {
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Fischer, Martha
+							Clement-Bayard,
 							<br />
-							208
+							Allegra
+							<br />
+							104
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Fischer, Martha
+							Clement-Bayard,
 							<br />
-							208
+							Allegra
+							<br />
+							104
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Fischer, Martha
+							Clement-Bayard,
 							<br />
-							208
+							Allegra
+							<br />
+							104
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Fischer, Martha
+							Clement-Bayard,
 							<br />
-							208
+							Allegra
+							<br />
+							104
 						</td>
 						<td className="border border-gray-500">
 							ASH
 							<br />
-							Fischer, Martha
+							Clement-Bayard,
 							<br />
-							208
+							Allegra
+							<br />
+							104
 						</td>
 					</tr>
 				</table>

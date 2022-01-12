@@ -39,7 +39,7 @@ export default function QuietPlaces() {
 							<br />
 							Hasselman
 							<br />
-							???
+							105
 						</td>
 						<td className="border border-gray-500">
 							ASH
@@ -48,7 +48,7 @@ export default function QuietPlaces() {
 							<br />
 							Hasselman
 							<br />
-							???
+							105
 						</td>
 						<td className="border border-gray-500">
 							ASH
@@ -57,7 +57,7 @@ export default function QuietPlaces() {
 							<br />
 							Hasselman
 							<br />
-							???
+							105
 						</td>
 						<td className="border border-gray-500">
 							ASH
@@ -66,7 +66,7 @@ export default function QuietPlaces() {
 							<br />
 							Hasselman
 							<br />
-							???
+							105
 						</td>
 						<td className="border border-gray-500">
 							ASH
@@ -75,7 +75,7 @@ export default function QuietPlaces() {
 							<br />
 							Hasselman
 							<br />
-							???
+							105
 						</td>
 					</tr>
 					<tr>

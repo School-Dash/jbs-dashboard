@@ -4,7 +4,7 @@ export default function QuietPlaces() {
 	return (
 		<Layout>
 			<main className="py-36">
-				<table className="m-auto bg-opacity-50 bg-white rounded-lg p-5 border-separate">
+				<table className="m-auto bg-opacity-50 bg-white rounded-lg p-5 border-separate text-sm sm:text-base">
 					<caption>
 						<h1 className="text-center font-bold text-4xl mb-3">
 							ASH

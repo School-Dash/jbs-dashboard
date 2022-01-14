@@ -1,8 +1,9 @@
 import Layout from '../components/Layout.js';
 import Calendar from '../lib/calendar.js';
-import { SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
+import { SCHEDULES, SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
 import padZeros from '../lib/padZeros.js';
 import { useState, useEffect } from 'react';
+import { periodLabel } from './schedules.js';
 
 export default function Home({ calData }) {
 	let cal = new Calendar(calData);
@@ -56,8 +57,43 @@ export default function Home({ calData }) {
 						</h2>
 					)
 				) : (
-					<>No School Stuff</>
+					<div className="m-auto">No School Stuff</div>
 				)}
+				<div className="bg-opacity-50 bg-white w-min rounded-lg px-5 my-9 m-auto">
+					<h3 className="text-2xl py-3">
+						{SCHEDULE_DAY_TYPES[dayType]}
+					</h3>
+					<table>
+						<tbody>
+							{SCHEDULES[dayType].map((period, j) => {
+								const isCom = SCHEDULES[dayType][4][0] != 0; //checks if common period is blank [0,0]
+
+								if (period[0] == 0) return;
+
+								return (
+									<tr key={`${j}`}>
+										<th className="text-left pr-3">
+											{periodLabel(j, isCom)}
+										</th>
+										{period.map((_, k) => {
+											const h = Math.floor(
+												period[k] / 100
+											);
+											const m = period[k] % 100;
+
+											return (
+												<td key={`${k} ${j}`}>
+													{h > 12 ? h - 12 : h}:
+													{padZeros(m)}
+												</td>
+											);
+										})}
+									</tr>
+								);
+							})}
+						</tbody>
+					</table>
+				</div>
 			</main>
 		</Layout>
 	);

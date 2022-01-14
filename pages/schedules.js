@@ -2,16 +2,16 @@ import Layout from '../components/Layout.js';
 import { SCHEDULES, SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
 import padZeros from '../lib/padZeros.js';
 
-export default function Schedules() {
-	function periodLabel(index, isCom) {
-		if (index < 4) {
-			return index == 0 ? 'Assembly' : `Period ${index}`;
-		} else if (index == 4 && isCom) {
-			return 'Common';
-		}
-		return `Period ${index - 1}`;
+export function periodLabel(index, isCom) {
+	if (index < 4) {
+		return index == 0 ? 'Assembly' : `Period ${index}`;
+	} else if (index == 4 && isCom) {
+		return 'Common';
 	}
+	return `Period ${index - 1}`;
+}
 
+export default function Schedules() {
 	return (
 		<Layout>
 			<main>

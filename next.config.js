@@ -4,8 +4,8 @@ module.exports = {
 		return process.env.NODE_ENV != 'development'
 			? [
 					{
-						source: '/:page*',
-						destination: 'https://jbsdash.com/:page*',
+						source: '/',
+						destination: 'https://jbsdash.com/',
 						permanent: true
 					}
 			  ]

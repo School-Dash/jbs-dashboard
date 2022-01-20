@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState } from 'react';
+import { useRouter } from 'next/dist/client/router';
 
 export default function Layout({ children }) {
 	const [isOpen, setIsOpen] = useState(false);
 
+	console.log(useRouter().basePath);
 	return (
 		<>
 			<Head>

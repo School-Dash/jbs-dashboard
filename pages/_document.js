@@ -22,7 +22,7 @@ class MyDocument extends Document {
 						content="JBS Dash"
 					/>
 				</Head>
-				<body className="bg-gradient-to-r from-green-400 to-blue-500 w-screen h-full bg-no-repeat min-h-screen max-w-screen">
+				<body className="bg-gradient-to-r from-green-400 to-blue-500 w-screen h-full bg-no-repeat min-h-screen max-w-full">
 					<Main />
 					<NextScript />
 				</body>

@@ -3,7 +3,7 @@ module.exports = {
 	async redirects() {
 		return [
 			{
-				source: '/',
+				source: 'https://jbsdash.netlify.app/',
 				destination: 'https://jbsdash.com',
 				permanent: true
 			}

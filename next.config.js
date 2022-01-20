@@ -1,12 +1,14 @@
 module.exports = {
 	reactStrictMode: true,
 	async redirects() {
-		return [
-			{
-				source: 'https://jbsdash.netlify.app/',
-				destination: 'https://jbsdash.com',
-				permanent: true
-			}
-		];
+		return process.env.NODE_ENV != 'development'
+			? [
+					{
+						source: '/:page*',
+						destination: 'https://jbsdash.com/:page*',
+						permanent: true
+					}
+			  ]
+			: [];
 	}
 };

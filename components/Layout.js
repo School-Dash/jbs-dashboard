@@ -33,6 +33,14 @@ export default function Layout({ children }) {
 							Quiet Places
 						</a>
 					</Link>
+					<a
+						href="https://www.sagedining.com/menus/jbs"
+						rel="noopener noreferrer"
+						target="_blank"
+						className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-40 rounded-md transition-color duration-200 hover:bg-opacity-20"
+					>
+						Lunch
+					</a>
 					<Link href="/share">
 						<a className="mx-2 font-semibold text-2xl p-2 bg-white bg-opacity-40 rounded-md transition-color duration-200 hover:bg-opacity-20">
 							Share
@@ -63,6 +71,14 @@ export default function Layout({ children }) {
 									Quiet Places
 								</a>
 							</Link>
+							<a
+								href="https://www.sagedining.com/menus/jbs"
+								rel="noopener noreferrer"
+								target="_blank"
+								className="my-2 text-center font-semibold text-2xl p-2 bg-white bg-opacity-40 rounded-md transition-color duration-200 hover:bg-opacity-20"
+							>
+								Lunch
+							</a>
 							<Link href="/share">
 								<a className="my-2 text-center font-semibold text-2xl p-2 bg-white bg-opacity-40 rounded-md transition-color duration-200 hover:bg-opacity-20">
 									Share

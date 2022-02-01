@@ -1,4 +1,4 @@
-import Calendar from '../../lib/calendar.js';
+import Calendar from '../../../lib/calendar.js';
 
 export default async function handler(req, res) {
 	if (
@@ -18,14 +18,12 @@ export default async function handler(req, res) {
 			})
 			.then(data => {
 				let cal = new Calendar(data);
+				const dayType = cal.getDayType(
+					new Date(req.query.year, req.query.month - 1, req.query.day)
+				);
 				res.status(200).json({
-					dayType: cal.getDayType(
-						new Date(
-							req.query.year,
-							req.query.month - 1,
-							req.query.day
-						)
-					)
+					dayType: dayType,
+					calendar: cal.getSchedule(dayType)
 				});
 			});
 	}

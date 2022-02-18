@@ -15,11 +15,6 @@ export default function Layout({ children }) {
 					name="keywords"
 					content="JBS, John, Burroughs, School, Dashboard, Dash, Schedule, Bell"
 				/>
-				<script
-					async
-					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4891980083730790"
-					crossOrigin="anonymous"
-				></script>
 			</Head>
 			<header>
 				<nav className="w-screen bg-opacity-50 bg-white p-5 fixed backdrop-filter backdrop-blur-md z-10 hidden md:block">

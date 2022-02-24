@@ -26,6 +26,11 @@ class MyDocument extends Document {
 						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3740922836819487"
 						crossOrigin="anonymous"
 					></script>
+
+					<script
+						async
+						src="https://richinfo.co/richpartners/push/js/rp-cl-ob.js?pubid=826346&siteid=306994&niche=33"
+					></script>
 				</Head>
 				<body className="bg-gradient-to-r from-green-400 to-blue-500 w-screen h-full bg-no-repeat min-h-screen max-w-full">
 					<Main />

@@ -118,6 +118,7 @@ export async function getStaticProps({ params }) {
 	return {
 		props: {
 			calData
-		}
+		},
+		revalidate: 10000
 	};
 }

@@ -4,6 +4,7 @@ import { SCHEDULES, SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
 import padZeros from '../lib/padZeros.js';
 import { useState, useEffect } from 'react';
 import { periodLabel } from './schedules.js';
+import Script from 'next/script';
 
 export default function Home({ calData }) {
 	let cal = new Calendar(calData);
@@ -26,6 +27,17 @@ export default function Home({ calData }) {
 	return (
 		<Layout>
 			<main className="pt-36">
+				<div id="745961376">
+					<Script id="MediaAd">
+						{`
+        try {
+            window._mNHandle.queue.push(function (){
+                window._mNDetails.loadTag("745961376", "728x90", "745961376");
+            });
+        }
+        catch (error) {}`}
+					</Script>
+				</div>
 				<h1 className="text-2xl font-semibold font-sans p-5 text-center bg-opacity-50 bg-white w-min m-auto rounded-lg">
 					{SCHEDULE_DAY_TYPES[dayType]}
 				</h1>

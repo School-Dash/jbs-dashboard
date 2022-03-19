@@ -21,11 +21,8 @@ class MyDocument extends Document {
 						name="apple-mobile-web-app-title"
 						content="JBS Dash"
 					/>
-					<script
-						async
-						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3740922836819487"
-						crossOrigin="anonymous"
-					></script>
+					<meta property="og:image" content="/thumbnail.png" />
+					<meta property="og:title" content="JBS Dash" />
 				</Head>
 				<body className="bg-gradient-to-r from-green-400 to-blue-500 w-screen h-full bg-no-repeat min-h-screen max-w-full">
 					<Main />

@@ -2,9 +2,11 @@ import Layout from '../components/Layout.js';
 import Calendar from '../lib/calendar.js';
 import { SCHEDULES, SCHEDULE_DAY_TYPES } from '../lib/schedule.js';
 import padZeros from '../lib/padZeros.js';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { periodLabel } from './schedules.js';
 import Script from 'next/script';
+import bookCover from '../public/book-cover.png';
 
 export default function Home({ calData }) {
 	let cal = new Calendar(calData);
@@ -27,17 +29,23 @@ export default function Home({ calData }) {
 	return (
 		<Layout>
 			<main className="pt-36">
-				<div id="745961376">
-					<Script id="MediaAd">
-						{`
-        try {
-            window._mNHandle.queue.push(function (){
-                window._mNDetails.loadTag("745961376", "728x90", "745961376");
-            });
-        }
-        catch (error) {}`}
-					</Script>
-				</div>
+				<a
+					target="_blank"
+					href="https://www.amazon.com/Brief-Wondrous-Life-Oscar-Wao/dp/1594483299?&_encoding=UTF8&tag=schooldash-20&linkCode=ur2&linkId=41f44223fc82d956336d90a7d13ae438&camp=1789&creative=9325"
+					rel="noreferrer"
+					className="flex flex-col items-center mb-4"
+				>
+					<Image
+						width={100}
+						height={160}
+						src={bookCover}
+						alt="book cover"
+					></Image>
+					<p className="p-5 font-semibold">
+						Cheaper than the bookstore.
+					</p>
+				</a>
+
 				<h1 className="text-2xl font-semibold font-sans p-5 text-center bg-opacity-50 bg-white w-min m-auto rounded-lg">
 					{SCHEDULE_DAY_TYPES[dayType]}
 				</h1>

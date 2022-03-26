@@ -5,7 +5,6 @@ import padZeros from '../lib/padZeros.js';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { periodLabel } from './schedules.js';
-import Script from 'next/script';
 import bookCover from '../public/book-cover.png';
 
 export default function Home({ calData }) {

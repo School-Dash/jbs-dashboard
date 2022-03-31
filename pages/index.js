@@ -17,29 +17,7 @@ export default function Home({ calData }) {
 
 	let period = cal.getPeriod(cal.formatTime(currentTime), dayType);
 
-	const ads = [
-		{
-			text: 'ACT Textbook',
-			image: 'https://i.imgur.com/TuYwU3g.jpg',
-			link: 'https://www.amazon.com/Official-2021-2022-Practice-Online-Content/dp/1119787343/ref=sr_1_1?crid=2P6Q1O3FR540T&amp;keywords=act+prep+book&amp;qid=1648442166&amp;sprefix=act+prep+book%252Caps%252C92&amp;sr=8-1&_encoding=UTF8&tag=schooldash-20&linkCode=ur2&linkId=03b24d7eddbf9a0d243452a6a9617161&camp=1789&creative=9325',
-			width: 100,
-			height: 128
-		},
-		{
-			text: 'Midliner Zebra Highlighter',
-			image: 'https://i.imgur.com/QlbKgp6.jpg',
-			link: 'https://www.amazon.com/Zebra-Pen-Mildliner-Highlighter-Assorted/dp/B0752WWCTN/ref=sr_1_5?crid=2Z7BA24TMW40A&amp;keywords=mildliner%252Bzebra%252Bhighlighters&amp;qid=1648409678&amp;sprefix=mildli%252Cstripbooks%252C73&amp;sr=8-5&amp;th=1&_encoding=UTF8&tag=schooldash-20&linkCode=ur2&linkId=ed7d9c9d8d58ab63aa603710fae71102&camp=1789&creative=9325',
-			width: 193,
-			height: 150
-		},
-		{
-			text: 'AirpodsPro Discount',
-			image: 'https://i.imgur.com/6LiBnOW.jpg',
-			link: 'https://www.amazon.com/Apple-MLWK3AM-A-AirPods-Pro/dp/B09JQMJHXY/ref=sr_1_1_sspa?crid=32YM7QAX83OCK&amp;keywords=airpods&amp;qid=1648409779&amp;sprefix=airpod%252Caps%252C102&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE1VkI0WVBXSTJQNEkmZW5jcnlwdGVkSWQ9QTA2NTI3MTROS0U4WVJIUDFNTE4mZW5jcnlwdGVkQWRJZD1BMDU5MzA2MTdHSUxSNU00Q1QwOSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=&_encoding=UTF8&tag=schooldash-20&linkCode=ur2&linkId=29d1235221837491be419c1a4623cab7&camp=1789&creative=9325',
-			width: 138,
-			height: 150
-		}
-	];
+	const ads = [];
 
 	const [currentAd, setAd] = useState(-1);
 
@@ -56,7 +34,7 @@ export default function Home({ calData }) {
 	return (
 		<Layout>
 			<main className="pt-36">
-				{currentAd != -1 && (
+				{ads[currentAd] && (
 					<a
 						target="_blank"
 						href={ads[currentAd].link}
